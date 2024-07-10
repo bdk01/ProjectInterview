@@ -10,6 +10,6 @@ export default defineConfig({
     },
   },
   build: {
-    sourcemap: true, // Ensure source maps are enabled
+    sourcemap: false, // Ensure source maps are enabled
   },
 })
