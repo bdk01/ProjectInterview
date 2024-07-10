@@ -1,7 +1,7 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import path from "path"
-// https://vitejs.dev/config/
+import { defineConfig } from "vite";
+import react from '@vitejs/plugin-react-swc'
+import path from "path";
+
 export default defineConfig({
   plugins: [react()],
   resolve: {
@@ -10,6 +10,8 @@ export default defineConfig({
     },
   },
   build: {
-    sourcemap: false, // Ensure source maps are enabled
+    outDir: "./build",
+    sourcemap: true,
+    
   },
-})
+});

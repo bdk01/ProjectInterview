@@ -66,7 +66,7 @@ let tableColumnName = [
   },
 ];
 export function TableDemo({ sort, setSort, fetchedUsers }) {
-  const [opened, setOpened] = useState(false);
+  
   const { mutateAsync: deleteUser } = useDeleteUser();
   const onSort = useCallback((key) => {
     setSort((prevSortConfig) => {
@@ -126,7 +126,7 @@ export function TableDemo({ sort, setSort, fetchedUsers }) {
               <TableCell>{user?.phoneNumber}</TableCell>
               <TableCell>{user?.firstName}</TableCell>
               <TableCell>{user?.lastName}</TableCell>
-              <TableCell className="text-right">{user?.role}</TableCell>
+              <TableCell >{user?.role}</TableCell>
               <TableCell className="flex justify-center">
                 {/*  <Button className="bg-blue-500 hover:bg-blue-600 mr-2"> Edit</Button> */}
                 <Button className="bg-blue-700 px-5 hover:bg-blue-600 mr-2 ">
